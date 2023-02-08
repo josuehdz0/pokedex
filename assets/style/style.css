@@ -1,0 +1,16 @@
+/* BASIC STYLES HERE */
+.pokeblue{
+  background-color: #5cb9ff;
+}
+
+*{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.bborder{
+  border-bottom: 4px solid black;
+}
+
+.tborder{
+  border-top: 4px solid black;
+}
