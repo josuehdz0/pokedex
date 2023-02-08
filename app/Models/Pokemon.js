@@ -6,9 +6,11 @@ export class Pokemon{
 
   static PokemonListTemplate(pokemon){
     return`
-    <p>
-    <i class="mdi mdi-pokeball f-18"></i> ${pokemon.name}
-  </p>
+    <div class="col-12 my-1">
+                  <button class="btn btn-light w-100 text-start">
+                    <i class="mdi mdi-pokeball f-18"></i> ${pokemon.name}
+                  </button>
+                </div>
     `
   }
 

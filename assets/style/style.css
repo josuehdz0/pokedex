@@ -14,3 +14,8 @@
 .tborder{
   border-top: 4px solid black;
 }
+
+.scrolling{
+  height: 60vh;
+  overflow: auto;
+}

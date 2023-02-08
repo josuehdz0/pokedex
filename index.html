@@ -36,7 +36,7 @@
   </style>
 </head>
 
-<body class="debug">
+<body class="debu">
   <header>
     <div class="containter-fluid pokeblue bborder">
       <div class="row justify-content-end pt-4 pb-3 px-3">
@@ -45,7 +45,7 @@
             <div class="col-5">
               <h1>Pokémon</h1>
             </div>
-            <div class="col-5 d-flex justify-content-end">
+            <div class="col-6 d-flex justify-content-end">
               <button class="btn btn-light"> <i class="mdi mdi-pokeball f-18"></i> My Pokémon</button>
             </div>
           </div>
@@ -67,7 +67,7 @@
               src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
               alt="pokemonimg">
           </div>
-          <div class="card p-3">
+          <div class="card p-3 mb-4">
             <div class="row justify-content-evenly">
               <div class="col-5">
                 <p class=" fw-bold"> Height: </p>
@@ -83,11 +83,13 @@
         <div class="col-md-4">
           <div class="card p-3">
             <h3>Pokedex</h3>
-            <div>
-              <div class="row" id="pokemons">
-                <p>
-                  <i class="mdi mdi-pokeball f-18"></i> Ditto
-                </p>
+            <div class="scrolling">
+              <div class="row " id="pokemons">
+                <div class="col-12">
+                  <button class="btn btn-light">
+                    <i class="mdi mdi-pokeball f-18"></i> Ditto
+                  </button>
+                </div>
 
               </div>
             </div>
