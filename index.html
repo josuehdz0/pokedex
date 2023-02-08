@@ -36,7 +36,7 @@
   </style>
 </head>
 
-<body class="debu">
+<body class="debug">
   <header>
     <div class="containter-fluid pokeblue bborder">
       <div class="row justify-content-end pt-4 pb-3 px-3">
@@ -46,7 +46,7 @@
               <h1>Pokémon</h1>
             </div>
             <div class="col-5 d-flex justify-content-end">
-              <button class="btn btn-light">My Pokémon</button>
+              <button class="btn btn-light"> <i class="mdi mdi-pokeball f-18"></i> My Pokémon</button>
             </div>
           </div>
         </div>
@@ -55,9 +55,45 @@
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <div class="row justify-content-evenly py-5">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="row text-center p-3">
+              <h4>Pokémon Name</h4>
+            </div>
+          </div>
+          <div class="row">
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+              alt="pokemonimg">
+          </div>
+          <div class="card p-3">
+            <div class="row justify-content-evenly">
+              <div class="col-5">
+                <p class=" fw-bold"> Height: </p>
+                <p class=" fw-bold"> Types: </p>
+              </div>
+              <div class="col-5">
+                <p class=" fw-bold"> Weight: </p>
+                <button class="btn btn-light">Catch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h3>Pokedex</h3>
+            <div>
+              <div class="row" id="pokemons">
+                <p>
+                  <i class="mdi mdi-pokeball f-18"></i> Ditto
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
         </div>
       </div>
     </div>
