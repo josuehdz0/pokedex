@@ -3,6 +3,17 @@ export class Pokemon{
     this.name = data.name
     this.url = data.url
     this.img = data.sprites.other["official-artwork"].front_default
+    this.height = data.height
+    this.weight = data.weight
+    // this.types = data.types.map(type => type.name)
+    this.types = [];
+    if (data.types) {
+      data.types.forEach(type => {
+        if (type.type) {
+          this.types.push(type.type.name);
+        }
+      });
+    }
 
   }
 
@@ -32,12 +43,14 @@ export class Pokemon{
           <div class="card p-3 mb-4">
             <div class="row justify-content-evenly">
               <div class="col-5">
-                <p class=" fw-bold"> Height: </p>
-                <p class=" fw-bold"> Types: </p>
+                <p class=" fw-bold"> Height: ${this.height}</p>
+                <p class=" fw-bold"> Types:${this.types} </p>
               </div>
-              <div class="col-5">
-                <p class=" fw-bold"> Weight: </p>
-                <button class="btn btn-light">Catch</button>
+              <div class="col-6">
+                <p class=" fw-bold"> Weight: ${this.weight}</p>
+                <button class="btn btn-light" onclick="app.sandboxPokemonsController.catchPokemon()">
+                <i class="mdi mdi-pokeball f-18"></i> Catch
+                </button>
               </div>
             </div>
           </div>
