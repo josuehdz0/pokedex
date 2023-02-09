@@ -6,6 +6,7 @@ export class Pokemon{
     this.height = data.height
     this.weight = data.weight
     // this.types = data.types.map(type => type.name)
+    // NOTE vvvv figured this out with chatGPT
     this.types = [];
     if (data.types) {
       data.types.forEach(type => {
