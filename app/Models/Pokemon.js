@@ -2,7 +2,8 @@ export class Pokemon{
   constructor(data){
     this.name = data.name
     this.url = data.url
-    
+    this.img = data.sprites.other["official-artwork"].front_default
+
   }
 
 
@@ -23,9 +24,9 @@ export class Pokemon{
               <h4>${this.name}</h4>
             </div>
           </div>
-          <div class="row">
+          <div class="row py-3">
             <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+              src="${this.img}"
               alt="pokemonimg">
           </div>
           <div class="card p-3 mb-4">
