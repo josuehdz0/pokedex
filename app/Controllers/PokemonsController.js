@@ -12,7 +12,7 @@ function _drawPokemons(){
 }
 
 function _drawPokemon(){
-  setHTML('pokemon', appState.pokemon.SelectedPokemonTemplate)
+  setHTML('pokemon',appState.pokemon?.SelectedPokemonTemplate)
 }
 
 export class PokemonsController{
@@ -32,9 +32,9 @@ export class PokemonsController{
     }
   }
 
-  async getPokemonByIndex(index){
+  async getPokemonByIndex(name){
     try {
-      await pokemonsService.getPokemonByIndex(index)
+      await pokemonsService.getPokemonByIndex(name)
     } catch (error) {
       console.error(error);
       Pop.error(error.message)

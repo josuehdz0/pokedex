@@ -1,13 +1,15 @@
 export class Pokemon{
   constructor(data){
     this.name = data.name
+    this.url = data.url
+    
   }
 
 
   static PokemonListTemplate(pokemon){
     return`
     <div class="col-12 my-1">
-                  <button class="btn btn-light w-100 text-start" onclick="app.pokemonsController.getPokemonByIndex(${pokemon.index})">
+                  <button class="btn btn-light w-100 text-start" onclick="app.pokemonsController.getPokemonByIndex('${pokemon.name}')">
                     <i class="mdi mdi-pokeball f-18"></i> ${pokemon.name}
                   </button>
                 </div>
