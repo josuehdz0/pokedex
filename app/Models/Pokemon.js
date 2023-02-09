@@ -8,13 +8,15 @@ export class Pokemon{
     // this.types = data.types.map(type => type.name)
     // NOTE vvvv figured this out with chatGPT
     this.types = [];
-    if (data.types) {
-      data.types.forEach(type => {
-        if (type.type) {
-          this.types.push(type.type.name);
-        }
-      });
-    }
+      if (data.types) {
+        let typeNames = [];
+        data.types.forEach(type => {
+          if (type.type) {
+            typeNames.push(type.type.name);
+          }
+       });
+      this.types = typeNames.join(', ') + '<br>';
+      }
 
   }
 
@@ -43,9 +45,9 @@ export class Pokemon{
           </div>
           <div class="card p-3 mb-4">
             <div class="row justify-content-evenly">
-              <div class="col-5">
-                <p class=" fw-bold"> Height: ${this.height}</p>
-                <p class=" fw-bold"> Types:${this.types} </p>
+              <div class="col-6">
+                <p class=" "> Height: ${this.height}</p>
+                <p class=" "> Types: <br>${this.types} </p>
               </div>
               <div class="col-6">
                 <p class=" fw-bold"> Weight: ${this.weight}</p>
