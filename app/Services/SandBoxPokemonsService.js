@@ -9,6 +9,7 @@ class SandboxPokemonsService{
     let createdPokemon = new Pokemon(res.data)
     appState.myPokemons.push(createdPokemon)
     appState.emit('myPokemons')
+    //this works? But getting error?
   }
 
 }
